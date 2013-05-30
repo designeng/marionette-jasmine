@@ -1,3 +1,5 @@
-## Grunt autocreationtests task
+## Marionette with RequireJS
+
+and grunt useful tasks
 
 in progress
