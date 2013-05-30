@@ -32,15 +32,7 @@ module.exports = function (grunt) {
               }
             }
           },
-          //task "connect:specs"
-          /*
-          specs: {
-            options: {
-              port: 8878,
-              base: 'test'
-            }
-          },
-          */
+
           //task "connect:builded" for browser checking builded application
           builded: {
             options: {
@@ -76,12 +68,10 @@ module.exports = function (grunt) {
           js_autocreationtests: {
             files: ['app/scripts/**/*.js', 'app/scripts/**/**/*.js', 'app/scripts/**/**/**/*.js', 'app/scripts/**/**/**/**/*.js'],
             //tasks: ['copy', 'clean', 'autocreationtests']
-            //tasks: ['copy', 'clean', 'autocreationtests']
             tasks: ['autocreationtests', 'livereload']
           },
           html: {
             files: ['app/templates/**/*.html', 'app/templates/**/**/*.html'],
-            //tasks: ['copy', 'clean', 'autocreationtests']
             //tasks: ['copy', 'clean', 'autocreationtests']
             tasks: ['livereload']
           },
@@ -112,7 +102,6 @@ module.exports = function (grunt) {
 
         jasmine : {
           src : 'app/**/*.js',
-          //src: 'app/scripts/collections/todocollection.js',
           options : {
             specs : 'test/**/*.js',
             template : require('grunt-template-jasmine-istanbul'),
@@ -165,11 +154,7 @@ module.exports = function (grunt) {
     //tests coverage
     grunt.loadNpmTasks('grunt-plato');
 
-    //grunt.registerTask('default', ['autocreationtests', 'regarde']);
-
-    //grunt.registerTask('default', ['parsejs']);
-
-    grunt.registerTask('r', ['connect', 'regarde']);//основное, default надо подредактировать
+    grunt.registerTask('r', ['connect', 'regarde']);
 
     grunt.registerTask('a', ['autocreationtests']);//parse with esmorph, create tests
 
