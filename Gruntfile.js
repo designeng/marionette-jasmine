@@ -1,7 +1,4 @@
 /*
- * grunt-autocreationtests
- * 
- *
  * Copyright (c) 2013 Denis Savenok
  * Licensed under the MIT license.
  */
